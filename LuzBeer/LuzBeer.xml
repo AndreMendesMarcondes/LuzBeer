@@ -40,4 +40,16 @@
 </SegundaDescricao>
     <CaminhoFotoKit>/FotosCervejas\kitCerveja.png</CaminhoFotoKit>
   </Kit>
+  <CervejaFixa>
+    <CervejaId>238ebf10-505a-49f7-ab41-b81c8f54b36e</CervejaId>
+    <Nome>New England Ipa</Nome>
+    <Descricao>CERVEJA FORTE ESCURA TIPO AMERICAN PALE ALE 473ML / 5,5% VOL</Descricao>
+    <DescricaoCompleta>Para nossa American Pale Ale combinamos o lúpulo mais clássico desse estilo, Cascade, com a potência dos lúpulos Mosaic e Ekuanot. O resultado é uma cerveja de alta drinkability, aromática e saborosa.</DescricaoCompleta>
+    <QuantidadeMl>300</QuantidadeMl>
+    <Temperatura>50</Temperatura>
+    <Amargor>3</Amargor>
+    <Coloracao>5</Coloracao>
+    <CaminhoFoto>/FotosCervejas\cerveja e cope junto.png</CaminhoFoto>
+    <Ativo>false</Ativo>
+  </CervejaFixa>
 </LuzBeer>

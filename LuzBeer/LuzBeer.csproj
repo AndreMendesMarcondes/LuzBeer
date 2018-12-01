@@ -157,6 +157,7 @@
     <Compile Include="Business\Util.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CervejaFixaController.cs" />
     <Compile Include="Controllers\CervejaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KitController.cs" />
@@ -166,6 +167,7 @@
     </Compile>
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Cerveja.cs" />
+    <Compile Include="Models\CervejaFixa.cs" />
     <Compile Include="Models\Kit.cs" />
     <Compile Include="Models\LuzBeer.cs" />
     <Compile Include="Models\LuzBeerContext.cs" />
@@ -600,6 +602,9 @@
     <Content Include="Views\Shared\_NossaCervejaPreview1.cshtml" />
     <Content Include="Views\Shared\_NossaCervejaPreview2.cshtml" />
     <Content Include="Views\Kit\Index.cshtml" />
+    <Content Include="Views\Shared\_CervejaFixa.cshtml" />
+    <Content Include="Views\CervejaFixa\Create.cshtml" />
+    <Content Include="Views\CervejaFixa\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

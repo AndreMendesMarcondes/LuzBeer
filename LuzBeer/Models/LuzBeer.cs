@@ -10,5 +10,6 @@ namespace LuzBeer.Models
         public Admin Admin { get; set; }
         public List<Cerveja> ListaCervejas { get; set; }
         public Kit Kit { get; set; }
+        public CervejaFixa CervejaFixa { get; set; }
     }
 }

@@ -28,45 +28,42 @@
     <!-- Wrapper -->
     <div class="wrapper" style="overflow-y: hidden">
         <!-- Navigation -->
-        <div class="navbar section no-padding" role="navigation">
+        <div class="navbar section no-padding" role="navigation" id="menuPrincipal">
 
             <div class="container">
                 <div class="navbar-header">
-                    <a href="#index" class="logo" title="Luz Beer" style="cursor: pointer">
-                        <img src="~/images/LogoMenu.png" alt="Luz Beer" class="img-responsive" style="max-width: 170px; padding-top: 10px;">
-                    </a>
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="botaoFechar">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar top-bar"></span>
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>
                     </button>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul id="menu-primary" class="nav navbar-nav">
+                <div class="navbar-collapse collapse menuTop" id="menuBarModify" style="text-align: center">
+                    <ul id="menu-primary" class="nav navbar-nav" style="width: 100%">
                         <li id="listaIndex" class="active">
                             <span>
-                                <a href="#indexteste" onclick="scrollToAnchor('index');">Home</a>
+                                <a href="#indexteste" onclick=" $('#botaoFechar').click();">Home</a>
                             </span>
                         </li>
                         <li id="listaHistoria">
                             <span>
-                                <a href="#nossaHistoria" onclick="scrollToAnchor('nossaHistoria');">Nossa história</a>
+                                <a href="#nossaHistoria" onclick="$('#botaoFechar').click();">Nossa história</a>
                             </span>
                         </li>
                         <li id="listaKits">
                             <span>
-                                <a href="#kits" onclick="scrollToAnchor('kits');">Kit do Mês</a>
+                                <a href="#kits" onclick=" $('#botaoFechar').click();">Kit do Mês</a>
                             </span>
                         </li>
                         <li id="listaNossaCerveja">
                             <span>
-                                <a href="#nossaCerveja" onclick="scrollToAnchor('nossaCerveja');">Nossa Cerveja</a>
+                                <a href="#nossaCerveja" onclick=" $('#botaoFechar').click();">Nossa Cerveja</a>
                             </span>
                         </li>
                         <li id="listaContato">
                             <span>
-                                <a href="#contato" onclick="scrollToAnchor('contato');">Contato</a>
+                                <a href="#contato" onclick=" $('#botaoFechar').click();">Contato</a>
                             </span>
                         </li>
                     </ul>
@@ -108,11 +105,11 @@
                     <div class="col-sm-2 col-sm-offset-2">
                         <h6>Links</h6>
                         <ul>
-                            <li><a href="#indexteste" onclick="scrollToAnchor('index');">Home</a></li>
-                            <li><a href="#kits" onclick="scrollToAnchor('kits');">Kit do Mês</a></li>
-                            <li><a href="#nossaCerveja" onclick="scrollToAnchor('nossaCerveja');">Nossa Cerveja</a></li>
-                            <li><a href="#historia" onclick="scrollToAnchor('nossaHistoria');">Nossa História</a></li>
-                            <li><a href="#contato" onclick="scrollToAnchor('contato');">Contato</a></li>
+                            <li><a href="#indexteste" onclick="$('#botaoFechar').click();">Home</a></li>
+                            <li><a href="#kits" onclick=" $('#botaoFechar').click();">Kit do Mês</a></li>
+                            <li><a href="#nossaCerveja" onclick=" $('#botaoFechar').click();">Nossa Cerveja</a></li>
+                            <li><a href="#historia" onclick=" $('#botaoFechar').click();">Nossa História</a></li>
+                            <li><a href="#contato" onclick="$('#botaoFechar').click();">Contato</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-4 text-center" style="left:80px">
@@ -150,6 +147,17 @@
     <script>
         $(window).on('load', function () {
             $('#myModal').modal('show');
+
+            $(".banner--unstick").load(function () {
+                alert("oi");
+            });
+
+            $(window).scroll(function (event) {
+                var height = $(window).scrollTop();
+                if (height > 600) {
+                    $("#menuPrincipal").html("<div class='container'><div class='navbar-header'><a href='#index' class='logo' title='Luz Beer' style='cursor: pointer'><img src='/images/LogoMenu.png' id='imgLogoCentral' alt='Luz Beer' class='img-responsive' style='max-width: 170px; padding-top: 10px;'></a><button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'><span class='sr-only'>Toggle navigation</span><span class='icon-bar top-bar'></span><span class='icon-bar middle-bar'></span><span class='icon-bar bottom-bar'></span></button></div><div class='navbar-collapse collapse'><ul id='menu-primary' class='nav navbar-nav' style='margin-top: -17.5px;'><li id='listaIndex' class=''><span><a href='#indexteste' onclick='scrollToAnchor('index');'>Home</a></span></li><li id='listaHistoria' class='active'><span><a href='#nossaHistoria' onclick='scrollToAnchor('nossaHistoria');'>Nossa história</a></span></li><li id='listaKits'><span><a href='#kits' onclick='scrollToAnchor('kits');'>Kit do Mês</a></span></li><li id='listaNossaCerveja'><span><a href='#nossaCerveja' onclick='scrollToAnchor('nossaCerveja');'>Nossa Cerveja</a></span></li><li id='listaContato'><span><a href='#contato' onclick='scrollToAnchor('contato');'>Contato</a></span></li></ul></div></div>");
+                }
+            });
         });
         $('#myModal').modal({ backdrop: 'static', keyboard: false })  
 
@@ -185,6 +193,8 @@
             limptarActives();
             $("#listaContato").addClass("active");
         });
+
+        $(".navbar .section no-padding banner--clone banner--stick")
     </script>
     <style>
         .branco a{
@@ -209,6 +219,16 @@
             text-align: left;
             vertical-align: middle;
         }
+        .menuTop li {
+            margin: 0 4%;
+        }
+        .menuTop li span a{
+        }
+        .navbar-collapse .menuTop .collapse .in{
+            margin-top: 120px;
+        }
+      
+      
     </style>
 </body>
 </html>

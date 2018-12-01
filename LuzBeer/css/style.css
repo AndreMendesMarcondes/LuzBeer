@@ -699,6 +699,9 @@ hr.space-40 {
 
     background: #cbb27c;
 }
+#menuBarModify {
+    margin-top: 40px;
+}
 
 .nav li a:after {
     top: auto;
@@ -2606,6 +2609,9 @@ footer .copyright {
 /** Tablet media queries  **/
 
 @media (max-width: 768px) {
+    #menuBarModify {
+        margin-top: 100px;
+    }
     .navbar.banner--stick {
         display: none;
     }
@@ -2689,7 +2695,7 @@ footer .copyright {
     .navbar-toggle {
         position: absolute;
         z-index: 999;
-        top: 0;
+        top: 50px;
         right: 20px;
         bottom: 0;
 
