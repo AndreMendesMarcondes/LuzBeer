@@ -1,0 +1,107 @@
+﻿body {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #32556e !important;
+    background-color: #fff;
+}
+
+legend {
+    color: #32556e !important;
+    border-bottom-color: #32556e !important;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #32556e;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+/* Styles personalizados
+-----------------------------------------------------------*/
+
+.SHeader {
+    height: 10%;
+}
+
+.SBoxConteudo {
+    margin-top: -19px;
+    padding: 10px 15px 20px 15px;
+    border: 5px solid rgb(210, 210, 210);
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    border: 5px solid #1094A3;
+    min-height: 600px;
+}
+
+
+.SRodape {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.conteudo {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-right: 0px !important;
+}
+
+.textAreaNoResize {
+    resize: none;
+}
+
+.wordWrap {
+    word-break: break-all !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}

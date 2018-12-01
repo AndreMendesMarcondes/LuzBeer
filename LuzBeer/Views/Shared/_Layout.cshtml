@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luz Beer - Cerveja Artesanal</title>
+    <link rel="icon" type="image/png" href="~/images/favicon.png" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/fakeLoader.css" rel="stylesheet">
+    <link href="~/css/owl-carousel.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800%7CGrand+Hotel" rel="stylesheet">
+
+    <!--[if IE 9]>
+        <link href="css/ie9.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Fake page loading -->
+    <div id="fakeLoader"></div>
+
+    <!-- Wrapper -->
+    <div class="wrapper" style="overflow-y: hidden">
+        <!-- Navigation -->
+        <div class="navbar section no-padding" role="navigation">
+
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="#index" class="logo" title="Luz Beer" style="cursor: pointer">
+                        <img src="~/images/LogoMenu.png" alt="Luz Beer" class="img-responsive" style="max-width: 170px; padding-top: 10px;">
+                    </a>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="menu-primary" class="nav navbar-nav">
+                        <li id="listaIndex" class="active">
+                            <span>
+                                <a href="#indexteste" onclick="scrollToAnchor('index');">Home</a>
+                            </span>
+                        </li>
+                        <li id="listaHistoria">
+                            <span>
+                                <a href="#nossaHistoria" onclick="scrollToAnchor('nossaHistoria');">Nossa história</a>
+                            </span>
+                        </li>
+                        <li id="listaKits">
+                            <span>
+                                <a href="#kits" onclick="scrollToAnchor('kits');">Kit do Mês</a>
+                            </span>
+                        </li>
+                        <li id="listaNossaCerveja">
+                            <span>
+                                <a href="#nossaCerveja" onclick="scrollToAnchor('nossaCerveja');">Nossa Cerveja</a>
+                            </span>
+                        </li>
+                        <li id="listaContato">
+                            <span>
+                                <a href="#contato" onclick="scrollToAnchor('contato');">Contato</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="myModal2" class="modal fade" role="dialog" >
+            <div class="modal-dialog" >
+                <div class="modal-content" style="background: #1b1d1e; ">
+                    <div class="modal-header">
+                        <div class="text-center">
+                            <div class="col-md-offset-4">
+                                <img src="~/images/LogoMenu.png" style="max-width: 170px" alt="Luz Beer" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body text-center">
+                        <h1 style="color: white">VOCÊ TEM MAIS DE 18 ANOS?</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-10 col-md-offset-2 text-center">
+                            <div class="col-md-5">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">SIM</button>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="http://itmae.uol.com.br/wp-content/uploads/2016/05/crianca_leite_copo-620x562.jpg" type="button" class="btn btn-danger">NÃO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero -->
+        @RenderBody();
+        <!-- Footer -->
+        <footer style="padding: 10px 0 10px 0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-2">
+                        <h6>Links</h6>
+                        <ul>
+                            <li><a href="#indexteste" onclick="scrollToAnchor('index');">Home</a></li>
+                            <li><a href="#kits" onclick="scrollToAnchor('kits');">Kit do Mês</a></li>
+                            <li><a href="#nossaCerveja" onclick="scrollToAnchor('nossaCerveja');">Nossa Cerveja</a></li>
+                            <li><a href="#historia" onclick="scrollToAnchor('nossaHistoria');">Nossa História</a></li>
+                            <li><a href="#contato" onclick="scrollToAnchor('contato');">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 text-center" style="left:80px">
+                        <img src="~/images/LogoMenu.png" alt="Luz Beer" class="img-responsive" width="50%" height="50%" />
+                        <div class="col-sm-3 text-center branco">
+                            <a style="font-size: 20px;" href="https://www.instagram.com/luz.beer/" target="_blank" class="fa fa-instagram"></a>
+                        </div>
+                        <div class="col-sm-3 text-center branco">
+                            <a style="font-size: 20px;" href="https://www.facebook.com/cervejaluzbeer/" target="_blank" class="fa fa-facebook-square"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 branco">
+                        <h6>Onde estamos</h6>
+                        <p><i class="fa fa-map-marker " style="color: white !important; font-size: 25px !important"></i> Rua Ruy Barbosa , 950 vila Xavier</p>
+                        <p><i class="fa fa-envelope-o" style="color: white !important; font-size: 25px !important"></i>&nbsp;&nbsp;  contato@luzbeer.com.br</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="~/js/jquery-2.2.4.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/headhesive.min.js"></script>
+    <script src="~/js/matchHeight.min.js"></script>
+    <script src="~/js/modernizr.custom.js"></script>
+    <script src="~/js/waypoints.min.js"></script>
+    <script src="~/js/counterup.js"></script>
+    <script src="~/js/scrollme.min.js"></script>
+    <script src="~/js/fakeLoader.min.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/owl.autoplay.js"></script>
+    <script src="https://use.fontawesome.com/4dfd2d448a.js"></script>
+    <script src="~/js/custom.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $('#myModal').modal('show');
+        });
+        $('#myModal').modal({ backdrop: 'static', keyboard: false })  
+
+        function limptarActives() {
+            $("#listaIndex").removeClass("active");
+            $("#listaKits").removeClass("active");
+            $("#listaNossaCerveja").removeClass("active");
+            $("#listaHistoria").removeClass("active");
+            $("#listaContato").removeClass("active");
+        }
+
+        $('#indexteste').waypoint(function () {
+            limptarActives();
+            $("#listaIndex").addClass("active");
+        });
+        $('#nossaHistoria').waypoint(function () {
+            limptarActives();
+            $("#listaHistoria").addClass("active");
+        });
+        $('#kits').waypoint(function () {
+            limptarActives();
+            $("#listaKits").addClass("active");
+        });
+        $('#nossaCerveja').waypoint(function () {
+            limptarActives();
+            $("#listaNossaCerveja").addClass("active");
+        });
+        $('#historia').waypoint(function () {
+            limptarActives();
+            $("#listaHistoria").addClass("active");
+        });
+        $('#contato').waypoint(function () {
+            limptarActives();
+            $("#listaContato").addClass("active");
+        });
+    </script>
+    <style>
+        .branco a{
+            color: white !important;
+            font-size: 35px !important;
+        }
+        .modal {
+            text-align: center;
+            padding: 0 !important;
+        }
+
+            .modal:before {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+                margin-right: -4px;
+            }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+    </style>
+</body>
+</html>

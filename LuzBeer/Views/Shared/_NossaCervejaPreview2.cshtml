@@ -1,0 +1,123 @@
+﻿@model LuzBeer.Models.Cerveja
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luz Beer - Cerveja Artesanal</title>
+    <link rel="icon" type="image/png" href="~/images/favicon.png" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/fakeLoader.css" rel="stylesheet">
+    <link href="~/css/owl-carousel.min.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,800%7CGrand+Hotel" rel="stylesheet">
+
+    <!--[if IE 9]>
+        <link href="css/ie9.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container-fluid dark section no-padding" id="nossaCerveja">
+        <div class="row" >
+            <div class="col-sm-4 col-sm-offset-3 text-center">
+                <br />
+                <img src="@Model.CaminhoFoto" class="img-responsive" height="75%" width="75%" />
+            </div>
+            <div class="col-sm-4" style="margin: 4% 1% 2% 2%">
+                <section>
+                    <header>
+                        <h1>@Model.Nome</h1>
+                        <h3 style="color: white">@Model.Descricao</h3>
+                    </header>
+                </section>
+                <h3>@Model.QuantidadeMl</h3>
+                <h3>TEMPERATURA IDEAL</h3>
+                <h3>
+                    <img src="~/images/termometro.png" width="7%" />
+                    @Model.Temperatura
+                </h3>
+                <h3>Amargor</h3>
+                <h3>
+                    @if (Model.Amargor == "1")
+                    {
+                        <img src="~/images/amargor-1.png" />
+                    }
+                    else if (Model.Amargor == "2")
+                    {
+                        <img src="~/images/amargor-2.png" />
+                    }
+                    else if (Model.Amargor == "3")
+                    {
+                        <img src="~/images/amargor-3.png" />
+                    }
+                    else if (Model.Amargor == "4")
+                    {
+                        <img src="~/images/amargor-4.png" />
+                    }
+                    else if (Model.Amargor == "5")
+                    {
+                        <img src="~/images/amargor-5.png" />
+                    }
+                </h3>
+                <h3>Coloração</h3>
+                <h3>
+                    @if (Model.Coloracao == "1")
+                    {
+                        <img src="~/images/regua_cores_1.png" />
+                    }
+                    else if (Model.Coloracao == "2")
+                    {
+                        <img src="~/images/regua_cores_2.png" />
+                    }
+                    else if (Model.Coloracao == "3")
+                    {
+                        <img src="~/images/regua_cores_3.png" />
+                    }
+                    else if (Model.Coloracao == "4")
+                    {
+                        <img src="~/images/regua_cores_4.png" />
+                    }
+                    else if (Model.Coloracao == "5")
+                    {
+                        <img src="~/images/regua_cores_5.png" />
+                    }
+                    else if (Model.Coloracao == "6")
+                    {
+                        <img src="~/images/regua_cores_6.png" />
+                    }
+                    else if (Model.Coloracao == "7")
+                    {
+                        <img src="~/images/regua_cores_7.png" />
+                    }
+                    else if (Model.Coloracao == "8")
+                    {
+                        <img src="~/images/regua_cores_8.png" />
+                    }
+                    else if (Model.Coloracao == "9")
+                    {
+                        <img src="~/images/regua_cores_9.png" />
+                    }
+                    else if (Model.Coloracao == "10")
+                    {
+                        <img src="~/images/regua_cores_10.png" />
+                    }
+                    else if (Model.Coloracao == "11")
+                    {
+                        <img src="~/images/regua_cores_11.png" />
+                    }
+                    else if (Model.Coloracao == "12")
+                    {
+                        <img src="~/images/regua_cores_12.png" />
+                    }
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

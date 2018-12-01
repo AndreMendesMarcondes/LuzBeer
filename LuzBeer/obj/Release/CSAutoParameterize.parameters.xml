@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="LuzBeerContext-Web.config Connection String" description="LuzBeerContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=LuzBeerContext-20180826220754; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|LuzBeerContext-20180826220754.mdf" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\GIT\\luzbeer\\LuzBeer\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='LuzBeerContext']/@connectionString" />
+  </parameter>
+</parameters>

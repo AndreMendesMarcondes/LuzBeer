@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/bootstrap.js" type="text/javascript"></script>
+    <script src="../../Scripts/modernizr-2.8.3.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.mask.js"></script>
+    <link href="~/Content/toastr.css" rel="stylesheet" />
+    <script src="~/Scripts/toastr.js"></script>
+    @using LuzBeer.Models;
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="SHeader col-md-4">
+            </div>
+            <div class="col-md-4 text-center" style="margin-top: 20px;">
+                <img src="~/images/EscritoLuzBeer.png" alt="BBX" id="imgLogoSistema" height="70px" style="margin-top: 10px;" />
+            </div>
+            <div class="col-md-4" style="margin-top: 20px;">
+                <div style="float: right">
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid" style="background-color: #1094A3">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                    </button>
+                    <ul class="nav navbar-nav " style="font-size: 17px;">
+                        <li>@Html.ActionLink("Home", "Index", "Admin")</li>
+                        <li>@Html.ActionLink("Cervejas", "Index", "Cerveja")</li>
+                        <li>@Html.ActionLink("Kit", "Index", "Kit")</li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                </div>
+            </div>
+        </nav>
+        <div class="SBoxConteudo container col-md-12" style="padding-right: 0px !important">
+            <input type="hidden" id="mensagemSuccess" value="@TempData["mensagemSuccess"]" />
+            <input type="hidden" id="mensagemInfo" value="@TempData["mensagemInfo"]" />
+            <input type="hidden" id="mensagemWarning" value="@TempData["mensagemWarning"]" />
+            <input type="hidden" id="mensagemError" value="@TempData["mensagemError"]" />
+            @RenderBody()
+        </div>
+    </div>
+   
+    <style>
+        .dataTables_wrapper .dataTables_filter {
+            float: left;
+        }
+
+        .dataTables_wrapper .dataTables_length {
+            float: right;
+        }
+
+        th {
+            font-size: 11px !important;
+        }
+
+        td {
+            font-size: 11px !important;
+        }
+
+        input[type=search] {
+            width: 500px !important;
+        }
+    </style>
+    <script>
+        $(function () {
+            var displayMessage = function (message, msgType) {
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "9000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "3000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+                toastr[msgType](message);
+            };
+
+            if ($('#mensagemSuccess').val()) {
+                displayMessage($('#mensagemSuccess').val(), 'success');
+            }
+            if ($('#mensagemInfo').val()) {
+                displayMessage($('#mensagemInfo').val(), 'info');
+            }
+            if ($('#mensagemWarning').val()) {
+                displayMessage($('#mensagemWarning').val(), 'warning');
+            }
+            if ($('#mensagemError').val()) {
+                displayMessage($('#mensagemError').val(), 'error');
+            }
+        });
+
+        function chamarMensagem(mensagem, msgType) {
+            var displayMessage = function (message, msgType) {
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "positionClass": "toast-bottom-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": "300",
+                    "hideDuration": "9000",
+                    "timeOut": "5000",
+                    "extendedTimeOut": "3000",
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
+                toastr[msgType](message);
+            };
+
+            displayMessage(mensagem, msgType);
+        }
+    </script>
+</body>
+</html>

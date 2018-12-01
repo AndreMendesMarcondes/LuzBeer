@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/DataTables/css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="../../Scripts/bootstrap.js" type="text/javascript"></script>
+    <script src="../../Scripts/modernizr-2.8.3.js" type="text/javascript"></script>
+    <script src="../../Scripts/jquery-ui.js" type="text/javascript"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.js" type="text/javascript"></script>
+    <link href="~/Content/css.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        @using (Html.BeginForm("Logar", "Login", FormMethod.Post, new { @class = "form-signin" }))
+        {
+            <div class="form-group col-md-12 text-center" style="margin-top: 180px;">
+                <div class="col-md-offset-4 col-md-4">
+                    @if (TempData["MensagemLoginErro"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            @TempData["MensagemLoginErro"]
+                        </div>
+                    }
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h1>Faça seu Login</h1>
+                        </div>
+                        <div class="panel-body">
+                            <label for="inputEmail" class="sr-only">Login</label>
+                            <input type="text" id="txtLogin" name="txtLogin" class="form-control" placeholder="Login" required="" autofocus="">
+                            <br />
+                            <label for="inputPassword" class="sr-only">Senha</label>
+                            <input type="password" name="txtSenha" id="txtSenha" class="form-control" placeholder="Password" required="">
+                            <br />
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LuzBeer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Admin>
+    <Login>luzbeeradmin</Login>
+    <Senha>luzbeer2018</Senha>
+  </Admin>
+  <ListaCervejas>
+    <Cerveja>
+      <CervejaId>fb20deac-cac5-45cb-adbd-0180c3be173c</CervejaId>
+      <Nome>Bohemian</Nome>
+      <Descricao>CERVEJA EXTRA TIPO PILSNER</Descricao>
+      <QuantidadeMl>300ml</QuantidadeMl>
+      <Temperatura>2-6ºC</Temperatura>
+      <Amargor>2</Amargor>
+      <Coloracao>4</Coloracao>
+      <CaminhoFoto>/FotosCervejas\cervejaECopo.png</CaminhoFoto>
+      <Posicao>1</Posicao>
+      <Ativo>true</Ativo>
+    </Cerveja>
+    <Cerveja>
+      <CervejaId>94fcdee3-6dee-46c9-a3e0-9535b22f857e</CervejaId>
+      <Nome>Dry Stout</Nome>
+      <Descricao>GERMAN WEIZEN</Descricao>
+      <QuantidadeMl>300ML</QuantidadeMl>
+      <Temperatura>3-6ºC</Temperatura>
+      <Amargor>4</Amargor>
+      <Coloracao>11</Coloracao>
+      <CaminhoFoto>/FotosCervejas\cerveja preta casco e copo.png</CaminhoFoto>
+      <Posicao>2</Posicao>
+      <Ativo>true</Ativo>
+    </Cerveja>
+  </ListaCervejas>
+  <Kit>
+    <Mes>Setembro</Mes>
+    <PrimeiraCerveja>Bohemian Pilsner</PrimeiraCerveja>
+    <PrimeiraDescricao>Cerveja com sabor acentuado de malte, equilibrado com o amargor do lupulo, de coloração amarelo-palha. Espuma branca. Cremosa. Persistente e Alta Carbonatacao.</PrimeiraDescricao>
+    <SegundaCerveja>Dry Stout</SegundaCerveja>
+    <SegundaDescricao>Cerveja de coloração escura com aroma de cafe e chocolate. Seu sabor ambém remete ao café comum leve chocolate, de baixa carbonatação porém cremosa.
+
+</SegundaDescricao>
+    <CaminhoFotoKit>/FotosCervejas\kitCerveja.png</CaminhoFotoKit>
+  </Kit>
+</LuzBeer>

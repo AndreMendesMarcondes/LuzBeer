@@ -1,0 +1,10 @@
+﻿@model List<LuzBeer.Models.Cerveja>
+
+<div class="container-fluid dark section no-padding" id="nossaCerveja">
+    @{ 
+        var cerveja1 = Model.FirstOrDefault(c => c.Ativo && c.Posicao == 1);
+        var cerveja2 = Model.FirstOrDefault(c => c.Ativo && c.Posicao == 2);
+    }
+    @Html.Partial("_NossaCerveja1", cerveja1)
+    @Html.Partial("_NossaCerveja2", cerveja2)
+</div>

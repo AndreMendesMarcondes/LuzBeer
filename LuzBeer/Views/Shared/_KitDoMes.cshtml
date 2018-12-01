@@ -1,0 +1,39 @@
+﻿@model LuzBeer.Models.Kit
+
+<div class="container-fluid light section" style="background-repeat: repeat; background-color: currentColor;" id="kits">
+    <div id="carousel-1" class="carousel slide carousel-fade bs-carousel" data-ride="carousel">
+        <section class="mobile-center">
+            <header style="text-align:center">
+                <h1 >Kit do Mês</h1>
+                <h2 style="color: white">@Model.Mes</h2>
+            </header>
+        </section>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <div class="container">
+                    <div class="row" style="margin-top: -100px">
+                        <div class="col-sm-6 matchHeight" id="kitsteste" >
+                            <img src="@Model.CaminhoFotoKit" alt="Kit's" class="alignMiddle" style="border: none;" />
+                        </div>
+                        <div class="col-sm-5  matchHeight" style="height: 250px !important">
+                            <section class="alignMiddle padding mobile-center">
+                                <header>
+                                    <h1>@Model.PrimeiraCerveja</h1>
+                                </header>
+                                <p style="color: white !important; text-align:justify">@Model.PrimeiraDescricao</p>
+                            </section>
+                            <br />
+                            <section class="alignMiddle padding mobile-center">
+                                <header>
+                                    <h1>@Model.SegundaCerveja</h1>
+                                </header>
+                                <p style="color: white !important; text-align:justify">@Model.SegundaDescricao</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

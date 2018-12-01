@@ -1,0 +1,96 @@
+﻿@model LuzBeer.Models.Cerveja
+
+<div class="row" style="background-color:rgb(125, 52, 0);">
+    <div class="col-sm-4 col-sm-offset-3 text-center">
+        <br />
+        <img src="@Model.CaminhoFoto" class="img-responsive" height="75%" width="75%" />
+    </div>
+    <div class="col-sm-4" style="margin: 4% 1% 2% 2%">
+        <section>
+            <header>
+                <h1>@Model.Nome</h1>
+                <h3 style="color: white">@Model.Descricao</h3>
+            </header>
+        </section>
+        <h3>@Model.QuantidadeMl</h3>
+        <h3>TEMPERATURA IDEAL</h3>
+        <h3>
+            <img src="~/images/termometro.png" width="7%" />
+            @Model.Temperatura
+        </h3>
+        <h3>Amargor</h3>
+        <h3>
+            @if (Model.Amargor == "1")
+            {
+                <img src="~/images/amargor-1.png" />
+            }
+            else if (Model.Amargor == "2")
+            {
+                <img src="~/images/amargor-2.png" />
+            }
+            else if (Model.Amargor == "3")
+            {
+                <img src="~/images/amargor-3.png" />
+            }
+            else if (Model.Amargor == "4")
+            {
+                <img src="~/images/amargor-4.png" />
+            }
+            else if (Model.Amargor == "5")
+            {
+                <img src="~/images/amargor-5.png" />
+            }
+        </h3>
+        <h3>Coloração</h3>
+        <h3>
+            @if (Model.Coloracao == "1")
+            {
+                <img src="~/images/regua_cores_1.png" />
+            }
+            else if (Model.Coloracao == "2")
+            {
+                <img src="~/images/regua_cores_2.png" />
+            }
+            else if (Model.Coloracao == "3")
+            {
+                <img src="~/images/regua_cores_3.png" />
+            }
+            else if (Model.Coloracao == "4")
+            {
+                <img src="~/images/regua_cores_4.png" />
+            }
+            else if (Model.Coloracao == "5")
+            {
+                <img src="~/images/regua_cores_5.png" />
+            }
+            else if (Model.Coloracao == "6")
+            {
+                <img src="~/images/regua_cores_6.png" />
+            }
+            else if (Model.Coloracao == "7")
+            {
+                <img src="~/images/regua_cores_7.png" />
+            }
+            else if (Model.Coloracao == "8")
+            {
+                <img src="~/images/regua_cores_8.png" />
+            }
+            else if (Model.Coloracao == "9")
+            {
+                <img src="~/images/regua_cores_9.png" />
+            }
+            else if (Model.Coloracao == "10")
+            {
+                <img src="~/images/regua_cores_10.png" />
+            }
+            else if (Model.Coloracao == "11")
+            {
+                <img src="~/images/regua_cores_11.png" />
+            }
+            else if (Model.Coloracao == "12")
+            {
+                <img src="~/images/regua_cores_12.png" />
+            }
+        </h3>
+    </div>
+</div>
